@@ -1,4 +1,3 @@
-import scrapy
 import apify
 # -*- coding: utf-8 -*-
 import json
@@ -6,7 +5,7 @@ import scrapy
 import jsonlines as jl
 from scrapy import Selector
 
-from items.recipe_item import RecipeItem
+from actor.recipe_item import RecipeItem
 from shanghai.tools import batch
 import re
 
@@ -14,7 +13,7 @@ import re
 class RecipeSpider(scrapy.Spider):
     name = "recipe_spider"
     languages = "en"
-    custom_settings = {"ITEM_PIPELINES": {"recipes.pipelines.RecipePipeline": 300}}
+    custom_settings = {"ITEM_PIPELINES": {"actor.pipelines.RecipePipeline": 300}}
 
     def start_requests(self):
         staring_url = "https://www.allrecipes.com/"
@@ -158,7 +157,7 @@ class RecipeSpider(scrapy.Spider):
             # categories=response.meta['categories']
         ).to_dict()
 
-		apify.pushData(recipe_item)
+        apify.pushData(recipe_item)
 
 
 def parse_time(*, recipe_time):
@@ -199,4 +198,3 @@ def convert(name):
 
 
 		 
- 		

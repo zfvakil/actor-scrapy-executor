@@ -9,10 +9,10 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "recipes"
+BOT_NAME = "actor"
 
-SPIDER_MODULES = ["recipes.spiders"]
-NEWSPIDER_MODULE = "recipes.spiders"
+SPIDER_MODULES = ["actor.spiders"]
+NEWSPIDER_MODULE = "actor.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -65,13 +65,13 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {"scrapy_crawlera.CrawleraMiddleware": 610}
 
-DOWNLOADER_MIDDLEWARES = {
-    # ...
-    "shanghai.retry.RetryMiddleware": 500,
-    "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
-    "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
-    # ...
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     # ...
+#     "shanghai.retry.RetryMiddleware": 500,
+#     "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
+#     "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
+#     # ...
+# }
 # RETRY_HTTP_CODES = [500, 502, 503, 504, 400, 403, 408, 429]
 # RETRY_ENABLED = True
 

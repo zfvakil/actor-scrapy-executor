@@ -1,4 +1,3 @@
-from __future__ import annotations
 from w3lib.html import replace_entities
 from typing import TYPE_CHECKING, List, Optional
 import unidecode
