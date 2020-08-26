@@ -2,7 +2,6 @@ import apify
 # -*- coding: utf-8 -*-
 import json
 import scrapy
-import jsonlines as jl
 from scrapy import Selector
 
 from actor.recipe_item import RecipeItem
