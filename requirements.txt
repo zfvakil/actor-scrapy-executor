@@ -1,0 +1,45 @@
+ftfy
+# Image model libs
+six
+numpy
+scipy
+Pillow
+matplotlib
+scikit-image
+opencv-python
+imageio
+Shapely
+# After image model dependencies have been downloaded
+unidecode
+imgaug
+google-cloud-storage
+# Scraping libs
+scrapy
+scrapy-splash
+structlog
+diskcache
+scrapy-crawlera
+scrapy-rotating-proxies
+jsonlines
+ujson
+scrapy-dotpersistence
+click
+requests
+tuspy
+environs
+youtube_dl
+aiobotocore
+click
+pydantic
+requests_async
+boto3
+fake-useragent
+tqdm
+spacy
+spacy-langdetect
+mypy
+mypy_extensions
+dotty-dict
+pendulum
+black
+apify
